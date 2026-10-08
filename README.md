@@ -16,8 +16,8 @@ The easy way: in Taskhold, open Settings, make a setup URL, paste it into your a
 | Agent | How |
 |---|---|
 | Claude Code | `claude mcp add --transport http --scope user taskhold https://taskhold.com/api/mcp --header "Authorization: Bearer <your atd_sk_ key>"` |
-| Claude Code plugin (skill + server) | `/plugin marketplace add taskhold-com/taskhold-plugin`, then `/plugin install taskhold@taskhold` and paste your key when asked |
-| Skill only (any agent that reads skills) | `npx skills add taskhold-com/taskhold-plugin` |
+| Claude Code plugin (skill + server) | `/plugin marketplace add gettaskhold/taskhold-plugin`, then `/plugin install taskhold@taskhold` and paste your key when asked |
+| Skill only (any agent that reads skills) | `npx skills add gettaskhold/taskhold-plugin` |
 | Cursor, Windsurf, Codex, VS Code, Gemini CLI | Config generator: https://taskhold.com/tools/mcp-config |
 
 Per-agent guides: https://taskhold.com/for/claude-code, /for/cursor, /for/codex, /for/windsurf.
