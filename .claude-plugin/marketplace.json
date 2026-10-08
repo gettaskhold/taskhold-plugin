@@ -1,0 +1,17 @@
+{
+  "name": "taskhold",
+  "owner": {
+    "name": "Taskhold",
+    "url": "https://taskhold.com"
+  },
+  "metadata": {
+    "description": "A task list you share with your coding agents: Taskhold MCP server plus an agent skill."
+  },
+  "plugins": [
+    {
+      "name": "taskhold",
+      "source": "./",
+      "description": "Work from the task list you share with your coding agents. Pick up, note, block and complete tasks."
+    }
+  ]
+}

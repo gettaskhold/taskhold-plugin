@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.taskhold/taskhold",
+  "title": "Taskhold",
+  "description": "A task list you share with your coding agents: pick up, block, note and complete tasks.",
+  "version": "1.0.0",
+  "websiteUrl": "https://taskhold.com",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://taskhold.com/api/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer followed by your Taskhold API key (atd_sk_...), from a setup URL in Settings",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
