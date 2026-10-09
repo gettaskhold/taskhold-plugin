@@ -1,6 +1,6 @@
 ---
 name: taskhold
-description: Work from the task list you share with your human through the Taskhold MCP server. Use at the start of a coding session, when the user says "work on the next task", "what's on my list", "file this as a task", "add a TODO for later", or when you hit something you need the human to decide. Requires the taskhold MCP server (https://taskhold.com/api/mcp, Bearer API key from a Taskhold setup URL).
+description: Work from the task list the user shares with their coding agents through the Taskhold MCP server (https://taskhold.com/api/mcp, Bearer key from a Taskhold setup URL). Use at the start of a coding session and when the user says "work on the next task", "what's next", "what's on my list", "pick up my next todo", "check my task list", "file this as a task", "add a TODO for later", "put this on the backlog", "remind me to fix this later", "mark that done", "leave a note on the task", "what did the agent do", "turn these TODO comments into tasks", "what's in progress", or "I'm blocked on this". Also use when you need the human to decide something (block the task with a question). For the session's built-in todo checklist or a repo TODO.md the user points at, use those directly. For production errors and crash reports, use the user's error tracker.
 ---
 
 # Taskhold
