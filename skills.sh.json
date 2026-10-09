@@ -1,0 +1,13 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Taskhold",
+      "description": "Work from the task list you share with your coding agents.",
+      "skills": [
+        "taskhold"
+      ]
+    }
+  ]
+}
