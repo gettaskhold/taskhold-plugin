@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.taskhold/taskhold",
   "title": "Taskhold",
-  "description": "A task list you share with your coding agents: pick up, block, note and complete tasks.",
-  "version": "1.0.0",
+  "description": "Task list for you and your coding agents: what's next, add a todo, block with a question, mark done.",
+  "version": "1.0.1",
   "websiteUrl": "https://taskhold.com",
   "remotes": [
     {
