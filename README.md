@@ -1,6 +1,6 @@
 # Taskhold
 
-Taskhold is a task list you share with your coding agents, through a remote MCP server and an Agent Skill. You add and order tasks in the web app; Claude Code, Cursor or Codex picks up the next one, adds notes, blocks with a question when it needs you, and completes it with a summary. $12 a month per person.
+Taskhold is a task list you share with your coding agents, through a remote MCP server and an Agent Skill. You add and order tasks in the web app; Claude Code, Cursor or Codex picks up the next one, adds notes, blocks with a question when it needs you, and completes it with a summary. While it works, you watch a live board: the agent's steps, a progress bar per task and what it's doing right now. $12 a month per person.
 
 **Works with:** Claude Code, Cursor, Codex, Windsurf, VS Code Copilot, Gemini CLI, Cline, OpenCode and any MCP client. Every change is marked as made by you or by an agent.
 
