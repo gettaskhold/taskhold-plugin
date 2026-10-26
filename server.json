@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.taskhold/taskhold",
   "title": "Taskhold",
-  "description": "Task list for you and your coding agents: what's next, add a todo, block with a question, mark done.",
-  "version": "1.0.1",
+  "description": "Task list for you and your coding agents: what's next, live progress per step, ask when blocked.",
+  "version": "1.0.2",
   "websiteUrl": "https://taskhold.com",
   "remotes": [
     {
