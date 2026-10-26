@@ -2,6 +2,10 @@
 
 Taskhold is a task list you share with your coding agents, through a remote MCP server and an Agent Skill. You add and order tasks in the web app; Claude Code, Cursor or Codex picks up the next one, adds notes, blocks with a question when it needs you, and completes it with a summary. While it works, you watch a live board: the agent's steps, a progress bar per task and what it's doing right now. $12 a month per person.
 
+![Taskhold's live board: an agent plans five steps, each step fills its part of the progress bar, it stops to ask a question, the person answers from the board and the agent finishes the task.](assets/taskhold-live-demo.gif)
+
+Try the live board without an account: https://taskhold.com/demo/live (a scripted agent plans, reports progress and asks you a question you can answer).
+
 **Works with:** Claude Code, Cursor, Codex, Windsurf, VS Code Copilot, Gemini CLI, Cline, OpenCode and any MCP client. Every change is marked as made by you or by an agent.
 
 - Website: https://taskhold.com
@@ -59,7 +63,7 @@ Once the skill and server are connected, ask your agent:
 Take my next Taskhold task. Plan it in steps, report progress as you go, and block it with a question if you need me.
 ```
 
-Then open https://taskhold.com/dashboard/live. Each task the agent works on shows a bar split into its steps, the agent's name, elapsed time, an estimate of time left and what it's doing now. Blocked tasks sit at the top with the agent's question; you reply there and the agent reads it with `taskhold_updates`.
+Then open https://taskhold.com/dashboard/live (or see it first at https://taskhold.com/demo/live, no account needed). Each task the agent works on shows a bar split into its steps, the agent's name, elapsed time, an estimate of time left and what it's doing now. Blocked tasks sit at the top with the agent's question; you reply there and the agent reads it with `taskhold_updates`.
 
 More ways to see it, no extra install:
 
