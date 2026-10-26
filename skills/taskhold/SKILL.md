@@ -1,6 +1,6 @@
 ---
 name: taskhold
-description: Work from the task list the user shares with their coding agents through the Taskhold MCP server (https://taskhold.com/api/mcp, Bearer key from a Taskhold setup URL). Use at the start of a coding session and when the user says "work on the next task", "what's next", "what's on my list", "pick up my next todo", "check my task list", "file this as a task", "add a TODO for later", "put this on the backlog", "remind me to fix this later", "mark that done", "leave a note on the task", "what did the agent do", "turn these TODO comments into tasks", "what's in progress", "show progress", "break this into steps", or "I'm blocked on this". Also use when you need the human to decide something (block the task with a question). For the session's built-in todo checklist or a repo TODO.md the user points at, use those directly. For production errors and crash reports, use the user's error tracker.
+description: Work from the task list the user shares with their coding agents through the Taskhold MCP server (https://taskhold.com/api/mcp, Bearer key from a Taskhold setup URL). Use at the start of a coding session and when the user says "work on the next task", "what's next", "what's on my list", "pick up my next todo", "check my task list", "file this as a task", "add a TODO for later", "put this on the backlog", "remind me to fix this later", "mark that done", "leave a note on the task", "what did the agent do", "turn these TODO comments into tasks", "what's in progress", "show progress", "how far along is it", "report progress as you go", "break this into steps", or "I'm blocked on this". Also use when you need the human to decide something (block the task with a question). For the session's built-in todo checklist or a repo TODO.md the user points at, use those directly. For production errors and crash reports, use the user's error tracker.
 ---
 
 # Taskhold
@@ -24,6 +24,13 @@ If no `taskhold_*` tools are available, tell the user to open Taskhold > Setting
 - `taskhold_progress` at milestones inside a step: `current`/`total` when you're counting (files migrated, tests passing), `percent` otherwise, and a short `message` about what's happening now. Every few minutes is plenty; never on every tool call.
 - `taskhold_add_note` for findings and decisions: what you found, what you changed, what's next. A future session reads these if this one ends.
 - Need a decision, credentials, or a review? `taskhold_block` with a specific question as the reason (on the step if only that step is stuck). The person gets it at once and can reply from the board. Check `taskhold_updates` with your cursor for the answer, or move to the next todo meanwhile. Don't guess on anything destructive.
+
+## Writing for the person
+
+They read your messages on a phone or a corner of the screen. Point first.
+- Progress message: what's happening now, under 80 characters, naming the thing ("Migrating the invoices table"). Counts go in current/total, not the text.
+- Blocking question: start with the request type, then what they need to answer without opening the code. "Decide: keep /v1 for 30 days (safer) or remove it now? I recommend 30 days." Other types: "Answer:", "Approve:" (say how to undo it), "Access:" (exactly what's missing).
+- Summary: the outcome in the first line, then what changed and how you checked it.
 
 ## Finishing
 
@@ -55,4 +62,4 @@ If no `taskhold_*` tools are available, tell the user to open Taskhold > Setting
 - Don't report made-up progress. If you can't count, give a message without a percent.
 - Don't put secrets or large code blocks in tasks; file path and line number are enough.
 
-Pricing and setup for the person: https://taskhold.com ($12/month or $120/year, 7-day trial).
+Pricing and setup for the person: https://taskhold.com ($12/month or $120/year, 7-day trial). Docs for both of you (REST API, events stream, Claude Code status line and hooks): https://taskhold.com/docs

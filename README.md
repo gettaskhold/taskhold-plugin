@@ -5,6 +5,7 @@ Taskhold is a task list you share with your coding agents, through a remote MCP 
 **Works with:** Claude Code, Cursor, Codex, Windsurf, VS Code Copilot, Gemini CLI, Cline, OpenCode and any MCP client. Every change is marked as made by you or by an agent.
 
 - Website: https://taskhold.com
+- Docs: https://taskhold.com/docs (quickstart, MCP tools, REST API, events stream, recipes)
 - MCP server: `https://taskhold.com/api/mcp` (Streamable HTTP, `Authorization: Bearer atd_sk_...`)
 - Agent Skill: [`skills/taskhold/SKILL.md`](skills/taskhold/SKILL.md)
 - Official MCP Registry: `com.taskhold/taskhold`
@@ -50,20 +51,45 @@ Where the skill lands (to install by hand, copy `skills/taskhold/` there):
 
 The skill tells your agent when and how to use Taskhold; the MCP server does the work, so connect that too (see Install above).
 
+## Watch your agents work
+
+Once the skill and server are connected, ask your agent:
+
+```text
+Take my next Taskhold task. Plan it in steps, report progress as you go, and block it with a question if you need me.
+```
+
+Then open https://taskhold.com/dashboard/live. Each task the agent works on shows a bar split into its steps, the agent's name, elapsed time, an estimate of time left and what it's doing now. Blocked tasks sit at the top with the agent's question; you reply there and the agent reads it with `taskhold_updates`.
+
+More ways to see it, no extra install:
+
+- Claude Code status line with the current task and its bar: https://taskhold.com/docs/claude-code-status-line
+- A SessionStart hook that starts each session with your replies: https://taskhold.com/docs/claude-code-hooks
+- Progress from CI jobs over plain curl: https://taskhold.com/docs/ci-progress
+- Slack messages when an agent is blocked: https://taskhold.com/docs/slack-alerts
+
 ## What your agent can do
 
-`taskhold_get_current`, `taskhold_list`, `taskhold_get`, `taskhold_search`, `taskhold_create`, `taskhold_create_from_todo`, `taskhold_start`, `taskhold_complete`, `taskhold_block`, `taskhold_unblock`, `taskhold_add_note`, `taskhold_update`, `taskhold_set_priority`, `taskhold_list_projects`, `taskhold_list_labels`, `taskhold_get_summary`.
+| Tools | Use |
+|---|---|
+| `taskhold_plan`, `taskhold_progress`, `taskhold_updates` | Plan steps, move the progress bar, read the person's replies since a cursor |
+| `taskhold_get_current`, `taskhold_list`, `taskhold_get`, `taskhold_search` | Find work |
+| `taskhold_start`, `taskhold_complete`, `taskhold_block`, `taskhold_unblock` | Claim, finish, ask, resume |
+| `taskhold_create`, `taskhold_create_from_todo`, `taskhold_add_note`, `taskhold_update`, `taskhold_set_priority` | File and edit |
+| `taskhold_list_projects`, `taskhold_list_labels`, `taskhold_get_summary` | Context |
+
+Full reference with arguments and example output: https://taskhold.com/docs/mcp-tools
 
 ## Pricing
 
 One plan: $12 a month or $120 a year per person, every agent you run included. 7-day trial with a card up front; cancel before it ends and nothing is charged. Details: https://taskhold.com/#pricing
 
-## Support
+## Support and contributing
 
-hello@greatwork.company. Taskhold is made by Great Work LLC.
+hello@greatwork.company. Taskhold is made by Great Work LLC. Issues and pull requests that improve the skill's instructions or trigger phrases are welcome; describe the agent and the prompt where it misfired.
 
 ## License
 
 The skill and the files in this repository are MIT licensed. The Taskhold service itself is hosted and is not open source.
 
-<sub>Last updated: 2026-10-09</sub>
+<sub>Last updated: 2026-10-26</sub>
