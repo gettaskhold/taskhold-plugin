@@ -24,8 +24,8 @@ No key to copy: add the URL and sign in. In claude.ai or Claude Desktop, Customi
 
 | Agent | How |
 |---|---|
-| Claude Code | `claude mcp add --transport http --scope user taskhold https://taskhold.com/api/mcp --header "Authorization: Bearer <your atd_sk_ key>"` |
-| Claude Code plugin (skill + server) | `/plugin marketplace add gettaskhold/taskhold-plugin`, then `/plugin install taskhold@taskhold` and paste your key when asked |
+| Claude Code | `claude mcp add --transport http --scope user taskhold https://taskhold.com/api/mcp`, then `/mcp` and choose Authenticate. With an API key instead: add `--header "Authorization: Bearer <your atd_sk_ key>"` |
+| Claude Code plugin (skill + server) | `/plugin marketplace add gettaskhold/taskhold-plugin`, then `/plugin install taskhold@taskhold`. It signs you in on first use, no key to copy |
 | Skill only (any agent that reads skills) | `npx skills add gettaskhold/taskhold-plugin` |
 | Cursor, Windsurf, Codex, VS Code, Gemini CLI | Config generator: https://taskhold.com/tools/mcp-config |
 
