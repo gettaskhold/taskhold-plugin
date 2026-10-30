@@ -76,11 +76,14 @@ More ways to see it, no extra install:
 
 | Tools | Use |
 |---|---|
-| `taskhold_plan`, `taskhold_progress`, `taskhold_updates` | Plan steps, move the progress bar, read the person's replies since a cursor |
+| `taskhold_begin` | File a task (or take one), plan its steps and start it in one call |
+| `taskhold_plan`, `taskhold_progress`, `taskhold_updates` | Plan steps, move the progress bar, read the person's replies since a cursor (with `wait` up to 50 s) |
 | `taskhold_get_current`, `taskhold_list`, `taskhold_get`, `taskhold_search` | Find work |
 | `taskhold_start`, `taskhold_complete`, `taskhold_block`, `taskhold_unblock` | Claim, finish, ask, resume |
 | `taskhold_create`, `taskhold_create_from_todo`, `taskhold_add_note`, `taskhold_update`, `taskhold_set_priority` | File and edit |
-| `taskhold_list_projects`, `taskhold_list_labels`, `taskhold_get_summary` | Context |
+| `taskhold_list_projects`, `taskhold_create_project`, `taskhold_list_labels`, `taskhold_get_summary` | Context |
+
+Pass `project: "<repo folder name>"` on any call: projects are matched by name and created the first time an agent uses one, so agents never look up ids. 21 tools in all.
 
 Full reference with arguments and example output: https://taskhold.com/docs/mcp-tools
 
