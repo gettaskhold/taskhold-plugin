@@ -10,7 +10,7 @@ Try the live board without an account: https://taskhold.com/demo/live (a scripte
 
 - Website: https://taskhold.com
 - Docs: https://taskhold.com/docs (quickstart, MCP tools, REST API, events stream, recipes)
-- MCP server: `https://taskhold.com/api/mcp` (Streamable HTTP, `Authorization: Bearer atd_sk_...`)
+- MCP server: `https://taskhold.com/api/mcp` (Streamable HTTP). Sign in with OAuth (claude.ai, Claude Desktop, Claude Code, Cursor, Codex), or send `Authorization: Bearer atd_sk_...`
 - Agent Skill: [`skills/taskhold/SKILL.md`](skills/taskhold/SKILL.md)
 - Official MCP Registry: `com.taskhold/taskhold`
 
@@ -19,6 +19,8 @@ This repository holds the agent skill and the MCP config. The Taskhold service i
 ## Install
 
 The easy way: in Taskhold, open Settings, make a setup URL, paste it into your agent and say "set this up". It returns a new API key and the exact config for your client.
+
+No key to copy: add the URL and sign in. In claude.ai or Claude Desktop, Customize > Connectors > Add custom connector, paste `https://taskhold.com/api/mcp`. In Claude Code, `claude mcp add --transport http --scope user taskhold https://taskhold.com/api/mcp`, then run `/mcp` and choose Authenticate. In Codex, `codex mcp add taskhold --url https://taskhold.com/api/mcp` then `codex mcp login taskhold`.
 
 | Agent | How |
 |---|---|
