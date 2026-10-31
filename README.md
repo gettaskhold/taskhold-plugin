@@ -20,7 +20,7 @@ This repository holds the agent skill and the MCP config. The Taskhold service i
 
 One click, no key to copy (you sign in to Taskhold; a subscription or the 7-day trial is required):
 
-[![Add to Cursor](https://img.shields.io/badge/Add%20to-Cursor-000000?style=flat-square)](https://cursor.com/install-mcp?name=taskhold&config=eyJ1cmwiOiJodHRwczovL3Rhc2tob2xkLmNvbS9hcGkvbWNwIn0%3D)
+[![Add to Cursor](https://img.shields.io/badge/Add%20to-Cursor-000000?style=flat-square)](https://taskhold.com/add/cursor)
 [![Install in VS Code](https://img.shields.io/badge/Install%20in-VS%20Code-0098FF?style=flat-square)](https://vscode.dev/redirect/mcp/install?name=taskhold&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Ftaskhold.com%2Fapi%2Fmcp%22%7D)
 [![Add to Claude](https://img.shields.io/badge/Add%20to-Claude-D97757?style=flat-square)](https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Taskhold&connectorUrl=https%3A%2F%2Ftaskhold.com%2Fapi%2Fmcp)
 
