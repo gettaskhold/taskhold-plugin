@@ -1,7 +1,7 @@
 {
   "name": "taskhold",
   "displayName": "Taskhold",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A task list you share with your coding agents. Agents pick up the next task, add notes, block with a question for you and complete with a summary, through the Taskhold MCP server.",
   "author": {
     "name": "Great Work LLC",
@@ -18,5 +18,7 @@
     "coding agents",
     "mcp",
     "claude code"
-  ]
+  ],
+  "privacyPolicyUrl": "https://taskhold.com/privacy",
+  "icon": ".claude-plugin/icon.png"
 }

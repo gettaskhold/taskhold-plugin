@@ -85,9 +85,15 @@ More ways to see it, no extra install:
 | `taskhold_create`, `taskhold_create_from_todo`, `taskhold_add_note`, `taskhold_update`, `taskhold_set_priority` | File and edit |
 | `taskhold_list_projects`, `taskhold_create_project`, `taskhold_list_labels`, `taskhold_get_summary` | Context |
 
-Pass `project: "<repo folder name>"` on any call: projects are matched by name and created the first time an agent uses one, so agents never look up ids. 21 tools in all.
+Pass `project: "<repo folder name>"` on any call: projects are matched by name and created the first time an agent uses one, so agents never look up ids. 22 tools in all.
 
 Full reference with arguments and example output: https://taskhold.com/docs/mcp-tools
+
+## What this plugin runs and sends
+
+- It runs no code on your machine. It adds one skill (`skills/taskhold/SKILL.md`, instructions for the agent) and one remote MCP server, `https://taskhold.com/api/mcp`.
+- When your agent calls a Taskhold tool, the request goes to taskhold.com over HTTPS: task titles, descriptions, notes, steps, progress messages, project names and the agent's label, plus your sign-in token. Nothing else from your machine or repository is read or sent, unless your agent puts it in a task or note itself.
+- Taskhold stores that data to show it on your board, and never sells it or uses it to train models. Privacy policy: https://taskhold.com/privacy. Security details: https://taskhold.com/docs/security
 
 ## Pricing
 
@@ -101,4 +107,4 @@ hello@greatwork.company. Taskhold is made by Great Work LLC. Issues and pull req
 
 The skill and the files in this repository are MIT licensed. The Taskhold service itself is hosted and is not open source.
 
-<sub>Last updated: 2026-10-26</sub>
+<sub>Last updated: 2026-10-31</sub>
