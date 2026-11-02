@@ -22,11 +22,11 @@ One click, no key to copy (you sign in to Taskhold; a subscription or the 7-day 
 
 [![Add to Cursor](https://img.shields.io/badge/Add%20to-Cursor-000000?style=flat-square)](https://taskhold.com/add/cursor)
 [![Install in VS Code](https://img.shields.io/badge/Install%20in-VS%20Code-0098FF?style=flat-square)](https://vscode.dev/redirect/mcp/install?name=taskhold&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Ftaskhold.com%2Fapi%2Fmcp%22%7D)
-[![Add to Claude](https://img.shields.io/badge/Add%20to-Claude-D97757?style=flat-square)](https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Taskhold&connectorUrl=https%3A%2F%2Ftaskhold.com%2Fapi%2Fmcp)
+[![Add to Claude](https://img.shields.io/badge/Add%20to-Claude-D97757?style=flat-square)](https://claude.ai/directory/connectors/taskhold)
 
 The easy way: in Taskhold, open Settings, make a setup URL, paste it into your agent and say "set this up". It returns a new API key and the exact config for your client.
 
-No key to copy: add the URL and sign in. In claude.ai or Claude Desktop, Customize > Connectors > Add custom connector, paste `https://taskhold.com/api/mcp`. In Claude Code, `claude mcp add --transport http --scope user taskhold https://taskhold.com/api/mcp`, then run `/mcp` and choose Authenticate. In Codex, `codex mcp add taskhold --url https://taskhold.com/api/mcp` then `codex mcp login taskhold`. In ChatGPT, Plugins > Add > Add custom MCP server, paste the URL and choose OAuth (steps: https://taskhold.com/integrations/chatgpt).
+No key to copy: add the URL and sign in. In claude.ai or Claude Desktop, Taskhold is in the connector directory: open https://claude.ai/directory/connectors/taskhold and click Connect (or add `https://taskhold.com/api/mcp` as a custom connector). In Claude Code, `claude mcp add --transport http --scope user taskhold https://taskhold.com/api/mcp`, then run `/mcp` and choose Authenticate. In Codex, `codex mcp add taskhold --url https://taskhold.com/api/mcp` then `codex mcp login taskhold`. In ChatGPT, Plugins > Add > Add custom MCP server, paste the URL and choose OAuth (steps: https://taskhold.com/integrations/chatgpt).
 
 | Agent | How |
 |---|---|
