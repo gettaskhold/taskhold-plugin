@@ -2,7 +2,9 @@
 
 Taskhold is a task list you share with your coding agents, through a remote MCP server and an Agent Skill. You add and order tasks in the web app; Claude Code, Cursor or Codex picks up the next one, adds notes, blocks with a question when it needs you, and completes it with a summary. While it works, you watch a live board: the agent's steps, a progress bar per task and what it's doing right now. $12 a month per person.
 
-![Taskhold's live board: an agent plans five steps, each step fills its part of the progress bar, it stops to ask a question, the person answers from the board and the agent finishes the task.](assets/taskhold-live-demo.gif)
+[![Taskhold's live board: an agent plans five steps, each step fills its part of the progress bar, it stops to ask a question, the person answers from the board and the agent finishes the task.](https://taskhold.com/demo/poster-1280x720.jpg)](https://taskhold.com/demo/live)
+
+Watch it run, no account needed: https://taskhold.com/demo/live
 
 Try the live board without an account: https://taskhold.com/demo/live (a scripted agent plans, reports progress and asks you a question you can answer).
 
