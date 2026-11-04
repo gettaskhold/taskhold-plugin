@@ -6,7 +6,10 @@
       "title": "Taskhold",
       "description": "Work from the task list you share with your coding agents.",
       "skills": [
-        "taskhold"
+        "taskhold",
+        "taskhold-live-progress",
+        "taskhold-ask-when-blocked",
+        "taskhold-todos-to-tasks"
       ]
     }
   ]

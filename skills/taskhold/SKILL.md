@@ -28,10 +28,10 @@ Pass `project: "<repo folder name>"` on every call (the folder you're working in
 - Steps are subtasks. Finish each with `taskhold_complete` and `start_next: true`: it starts the next step and tells you which. The bar fills as steps finish (steps drive it). Re-plan with `taskhold_plan` and `replace: true` if the approach changes (finished steps stay). For an existing task without a plan: `taskhold_start`, then `taskhold_plan`.
 - Order steps so each one depends only on earlier ones, and make the first step the smallest change that proves the approach works.
 - When a step finishes, its summary says what you observed (tests passed, the migration ran on N rows), not only what you did.
-- If two approaches both look right and the choice is hard to undo, block with both, one line each, and your pick.
+- If two approaches both look right and the choice is hard to undo, block with both as `options` and your pick as `recommended`.
 - `taskhold_progress` on the running step at milestones: `current`/`total` when you're counting (files migrated, tests passing), `percent` otherwise, and a short `message` about what's happening now. Every few minutes is plenty; never on every tool call.
 - `taskhold_add_note` for findings and decisions: what you found, what you changed, what's next. A future session reads these if this one ends.
-- Need a decision, credentials, or a review? `taskhold_block` with a specific question as the reason (on the step if only that step is stuck). The person gets it at once and can reply from the board. Wait for the answer with `taskhold_updates` and `task_id`, `since` (your cursor) and `wait: 50`, repeated, or move to other work meanwhile. Don't guess on anything destructive.
+- Need a decision, credentials, or a review? `taskhold_block` with a specific question as the reason (on the step if only that step is stuck). When the answer is a choice, pass 2-4 short `options`, `recommended` (index of your pick) and `if_no_answer` (what you'll do meanwhile): they answer with one tap from their phone. Wait for the answer with `taskhold_updates` and `task_id`, `since` (your cursor) and `wait: 50`, repeated, or move to other work meanwhile. Don't guess on anything destructive.
 - If the reply is unclear, ask one follow-up; after two unclear rounds leave it blocked and work on something else.
 - Always block for approval before deleting data, spending money, touching secrets or deploying to production.
 
@@ -44,7 +44,8 @@ They read your messages on a phone or a corner of the screen. Point first.
 
 ## Finishing
 
-- `taskhold_complete` with a summary: what changed, which files, how you checked it.
+- `taskhold_complete` with a summary and an `outcome`: `files` (path, added, removed), `checks` (name, pass/fail/skip), `links` (PR, commit, deploy), `follow_ups` (task ids), `risks`, `verify` (how they can check it). On the last step, `finish_task: true` closes the task too.
+- When the person should look before it counts as done, add `needs_review: true` with an `outcome.verify` line saying how you checked it; their Approve or Request changes (back to todo with a note) arrives in `taskhold_updates`.
 - Bugs or TODOs you noticed but shouldn't fix now: `taskhold_create`, or `taskhold_create_from_todo` with `file_path` and `line_number`. Use priority low unless it's a real bug.
 
 ## Tools
@@ -52,19 +53,20 @@ They read your messages on a phone or a corner of the screen. Point first.
 | Tool | Use |
 |---|---|
 | taskhold_begin | Start work in one call: file (or take) a task, plan steps, start it and the first step |
-| taskhold_get_current | Task in progress (in a project), its steps and the next one |
+| taskhold_get_current | Task in progress (in a project), its steps and the next one, the latest 3 notes |
 | taskhold_list | Tasks by status/priority/project, one line each |
 | taskhold_get | One task with steps and notes |
 | taskhold_search | Text search |
 | taskhold_create / taskhold_create_from_todo | New task (or one step, with parent_task_id) / from a code TODO |
 | taskhold_plan | Break a task into ordered steps |
-| taskhold_start / taskhold_complete | Claim / finish a task or step, with summary |
+| taskhold_start / taskhold_complete | Claim / finish a task or step, with summary + outcome |
 | taskhold_progress | Percent or current/total + what's happening now |
-| taskhold_block / taskhold_unblock | Block with a question / unblock |
+| taskhold_block / taskhold_unblock | Block with a question (+ options) / unblock |
 | taskhold_add_note | Progress note |
 | taskhold_updates | What the person changed since your cursor (project, task_id, wait) |
 | taskhold_update / taskhold_set_priority | Edit |
 | taskhold_list_projects / taskhold_create_project | Projects with open work / find-or-create by name |
+| taskhold_update_project | Rename a project, change its description or color |
 | taskhold_list_labels / taskhold_get_summary | Context |
 
 ## Don't
