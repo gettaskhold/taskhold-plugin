@@ -12,7 +12,7 @@ Try the live board without an account: https://taskhold.com/demo/live (a scripte
 
 - Website: https://taskhold.com
 - Docs: https://taskhold.com/docs (quickstart, MCP tools, REST API, events stream, recipes)
-- MCP server: `https://taskhold.com/api/mcp` (Streamable HTTP). Sign in with OAuth (claude.ai, Claude Desktop, ChatGPT, Claude Code, Cursor, Codex, VS Code), or send `Authorization: Bearer atd_sk_...`
+- MCP server: `https://taskhold.com/api/mcp` (Streamable HTTP). Connect with OAuth and no key (claude.ai, Claude Desktop, ChatGPT, Claude Code, Cursor, Codex, VS Code), or send `Authorization: Bearer atd_sk_...`
 - Agent Skill: [`skills/taskhold/SKILL.md`](skills/taskhold/SKILL.md)
 - Official MCP Registry: `com.taskhold/taskhold`
 
@@ -20,7 +20,7 @@ This repository holds the agent skill and the MCP config. The Taskhold service i
 
 ## Install
 
-One click, no key to copy (you sign in to Taskhold; a subscription or the 7-day trial is required):
+One click, no key to copy and no sign-up first: your agent connects, and the first time it uses Taskhold it gives you a link to start the 7-day trial:
 
 [![Add to Cursor](https://img.shields.io/badge/Add%20to-Cursor-000000?style=flat-square)](https://taskhold.com/add/cursor)
 [![Install in VS Code](https://img.shields.io/badge/Install%20in-VS%20Code-0098FF?style=flat-square)](https://vscode.dev/redirect/mcp/install?name=taskhold&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Ftaskhold.com%2Fapi%2Fmcp%22%7D)
@@ -28,12 +28,12 @@ One click, no key to copy (you sign in to Taskhold; a subscription or the 7-day 
 
 The easy way: in Taskhold, open Settings, make a setup URL, paste it into your agent and say "set this up". It returns a new API key and the exact config for your client.
 
-No key to copy: add the URL and sign in. In claude.ai or Claude Desktop, Taskhold is in the connector directory: open https://claude.ai/directory/connectors/taskhold and click Connect (or add `https://taskhold.com/api/mcp` as a custom connector). In Claude Code, `claude mcp add --transport http --scope user taskhold https://taskhold.com/api/mcp`, then run `/mcp` and choose Authenticate. In Codex, `codex mcp add taskhold --url https://taskhold.com/api/mcp` then `codex mcp login taskhold`. In ChatGPT, Plugins > Add > Add custom MCP server, paste the URL and choose OAuth (steps: https://taskhold.com/integrations/chatgpt).
+No key to copy: add the URL and connect. If your browser is signed in to Taskhold you click Allow; if not, it connects right away, and the first time your agent uses Taskhold it gives you a setup link (7-day trial, or sign in to an account you already have). In claude.ai or Claude Desktop, Taskhold is in the connector directory: open https://claude.ai/directory/connectors/taskhold and click Connect (or add `https://taskhold.com/api/mcp` as a custom connector). In Claude Code, `claude mcp add --transport http --scope user taskhold https://taskhold.com/api/mcp`, then run `/mcp` and choose Authenticate. In Codex, `codex mcp add taskhold --url https://taskhold.com/api/mcp` then `codex mcp login taskhold`. In ChatGPT, Plugins > Add > Add custom MCP server, paste the URL, choose OAuth and sign in to Taskhold (steps: https://taskhold.com/integrations/chatgpt).
 
 | Agent | How |
 |---|---|
 | Claude Code | `claude mcp add --transport http --scope user taskhold https://taskhold.com/api/mcp`, then `/mcp` and choose Authenticate. With an API key instead: add `--header "Authorization: Bearer <your atd_sk_ key>"` |
-| Claude Code plugin (skill + server) | `/plugin marketplace add gettaskhold/taskhold-plugin`, then `/plugin install taskhold@taskhold`. It signs you in on first use, no key to copy |
+| Claude Code plugin (skill + server) | `/plugin marketplace add gettaskhold/taskhold-plugin`, then `/plugin install taskhold@taskhold`. It connects on first use with no key to copy; the first time it uses Taskhold you get a setup link |
 | Skill only (any agent that reads skills) | `npx skills add gettaskhold/taskhold-plugin` |
 | Cursor, Windsurf, Codex, VS Code, Gemini CLI | Config generator: https://taskhold.com/tools/mcp-config |
 
