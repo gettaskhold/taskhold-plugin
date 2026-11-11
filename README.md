@@ -27,9 +27,9 @@ One click, no key to copy and no sign-up first: your agent connects, and the fir
 [![Install in VS Code](https://img.shields.io/badge/Install%20in-VS%20Code-0098FF?style=flat-square)](https://vscode.dev/redirect/mcp/install?name=taskhold&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Ftaskhold.com%2Fapi%2Fmcp%22%7D)
 [![Add to Claude](https://img.shields.io/badge/Add%20to-Claude-D97757?style=flat-square)](https://claude.ai/directory/connectors/taskhold)
 
-The easy way: in Taskhold, open Settings, make a setup URL, paste it into your agent and say "set this up". It returns a new API key and the exact config for your client.
-
 No key to copy: add the URL and connect. If your browser is signed in to Taskhold you click Allow; if not, it connects right away, and the first time your agent uses Taskhold it gives you a setup link (7-day trial, or sign in to an account you already have). In claude.ai or Claude Desktop, Taskhold is in the connector directory: open https://claude.ai/directory/connectors/taskhold and click Connect (or add `https://taskhold.com/api/mcp` as a custom connector). In Claude Code, `claude mcp add --transport http --scope user taskhold https://taskhold.com/api/mcp`, then run `/mcp` and choose Authenticate. In Codex, `codex mcp add taskhold --url https://taskhold.com/api/mcp` then `codex mcp login taskhold`. In ChatGPT, Plugins > Add > Add custom MCP server, paste the URL, choose OAuth and sign in to Taskhold (steps: https://taskhold.com/integrations/chatgpt).
+
+Already have an account and want a key instead? In Taskhold, open Settings, make a setup URL, paste it into your agent and say "set this up". It returns a new API key and the exact config for your client.
 
 | Agent | How |
 |---|---|
@@ -116,4 +116,4 @@ hello@greatwork.company. Taskhold is made by Great Work LLC. Issues and pull req
 
 The skill and the files in this repository are MIT licensed. The Taskhold service itself is hosted and is not open source.
 
-<sub>Last updated: 2026-10-31</sub>
+<sub>Last updated: 2026-11-11</sub>
