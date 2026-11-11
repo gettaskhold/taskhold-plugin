@@ -9,7 +9,8 @@
         "taskhold",
         "taskhold-live-progress",
         "taskhold-ask-when-blocked",
-        "taskhold-todos-to-tasks"
+        "taskhold-todos-to-tasks",
+        "taskhold-for-jira"
       ]
     }
   ]

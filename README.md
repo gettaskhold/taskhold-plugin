@@ -14,6 +14,7 @@ Try the live board without an account: https://taskhold.com/demo/live (a scripte
 - Docs: https://taskhold.com/docs (quickstart, MCP tools, REST API, events stream, recipes)
 - MCP server: `https://taskhold.com/api/mcp` (Streamable HTTP). Connect with OAuth and no key (claude.ai, Claude Desktop, ChatGPT, Claude Code, Cursor, Codex, VS Code), or send `Authorization: Bearer atd_sk_...`
 - Agent Skill: [`skills/taskhold/SKILL.md`](skills/taskhold/SKILL.md)
+- Jira: [`skills/taskhold-for-jira/SKILL.md`](skills/taskhold-for-jira/SKILL.md), for agents that use the Taskhold for Jira app's tools on Atlassian's MCP server (hand Jira issues to your coding agents, read their progress)
 - Official MCP Registry: `com.taskhold/taskhold`
 
 This repository holds the agent skill and the MCP config. The Taskhold service is hosted; its code is not here.
