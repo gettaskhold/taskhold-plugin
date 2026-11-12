@@ -8,7 +8,12 @@ Taskhold is a remote MCP server. There is nothing to clone, build or run: you ad
 
 ## Cline
 
-Add this to `cline_mcp_settings.json` (Cline panel > MCP Servers > Configure > Configure MCP Servers):
+There is nothing to clone or build. If your install steps ask for a server directory, leave it empty, and don't write docs or test scripts for this server.
+
+Add this to `cline_mcp_settings.json`, keeping any servers already in it:
+
+- Cline in VS Code or another editor: the file opens from the Cline panel > MCP Servers > Configure > Configure MCP Servers. Use the path your instructions give for it.
+- Cline CLI: `~/.cline/data/settings/cline_mcp_settings.json` (or `$CLINE_MCP_SETTINGS_PATH` if it is set). Don't guess another path such as `~/Library/Application Support/Cline`; Cline doesn't read it.
 
 ```json
 {
@@ -21,7 +26,12 @@ Add this to `cline_mcp_settings.json` (Cline panel > MCP Servers > Configure > C
 }
 ```
 
-Keep `"type": "streamableHttp"`; without it Cline tries legacy SSE. Save, then the user clicks Authenticate on the taskhold row (Cline 4.1.7 or later).
+Keep `"type": "streamableHttp"`; without it Cline tries legacy SSE. Save. Then the user authorizes it once in a browser; you can't do this step for them, so tell them how:
+
+- In the editor: click Authenticate on the taskhold row in MCP Servers (Cline 4.1.7 or later).
+- In the CLI: run `cline mcp`, choose Authorize OAuth, then pick taskhold.
+
+The taskhold tools only show up after that. Until then a call fails with an authorization error; that is expected, not a broken install.
 
 ## Other clients
 
