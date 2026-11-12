@@ -5,13 +5,13 @@
     "url": "https://taskhold.com"
   },
   "metadata": {
-    "description": "A task list you share with your coding agents: Taskhold MCP server plus an agent skill."
+    "description": "A task list with a live board that you share with your coding agents: the Taskhold MCP server plus an agent skill."
   },
   "plugins": [
     {
       "name": "taskhold",
       "source": "./",
-      "description": "Work from the task list you share with your coding agents. Pick up, note, block and complete tasks."
+      "description": "Your agent picks up tasks, reports progress per step and asks you when it's blocked, on a live board. Connects with no account first."
     }
   ]
 }

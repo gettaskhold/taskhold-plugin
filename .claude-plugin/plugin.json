@@ -1,8 +1,8 @@
 {
   "name": "taskhold",
   "displayName": "Taskhold",
-  "version": "1.2.0",
-  "description": "A task list you share with your coding agents. Agents pick up the next task, add notes, block with a question for you and complete with a summary, through the Taskhold MCP server.",
+  "version": "1.2.1",
+  "description": "A task list you share with your coding agents, with a live board. Claude Code picks up the next task, splits it into steps, reports progress and asks you when it's blocked. Install it and the agent connects with no account first; the 7-day trial starts from a link it gives you.",
   "author": {
     "name": "Great Work LLC",
     "email": "hello@greatwork.company",
