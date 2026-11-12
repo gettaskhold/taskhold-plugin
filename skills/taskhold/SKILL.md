@@ -1,6 +1,6 @@
 ---
 name: taskhold
-description: Work from the task list the user shares with their coding agents through the Taskhold MCP server (https://taskhold.com/api/mcp, OAuth with no key or a Bearer key from a setup URL). Use at the start of a coding session and when the user says "work on the next task", "what's next", "what's on my list", "pick up my next todo", "check my task list", "file this as a task", "add a TODO for later", "put this on the backlog", "remind me to fix this later", "mark that done", "leave a note on the task", "what did the agent do", "turn these TODO comments into tasks", "what's in progress", "show progress", "how far along is it", "report progress as you go", "break this into steps", or "I'm blocked on this". Also use when you need the human to decide something (block the task with a question). For the session's built-in todo checklist or a repo TODO.md the user points at, use those directly. For production errors and crash reports, use the user's error tracker.
+description: Work from the task list the user shares with their coding agents through the Taskhold MCP server (https://taskhold.com/api/mcp, OAuth with no key or a Bearer key from a setup URL). Use at the start of a coding session and when the user says "work on the next task", "what's next", "what's on my list", "pick up my next todo", "check my task list", "file this as a task", "add a TODO for later", "put this on the backlog", "remind me to fix this later", "mark that done", "leave a note on the task", "what did the agent do", "turn these TODO comments into tasks", "import my tasks", "what's in progress", "show progress", "how far along is it", "report progress as you go", "break this into steps", or "I'm blocked on this". Also use when you need the human to decide something (block the task with a question). For the session's built-in todo checklist or a repo TODO.md the user points at, use those directly. For production errors and crash reports, use the user's error tracker.
 ---
 
 # Taskhold
@@ -10,6 +10,8 @@ Taskhold is a hosted task list shared by a person and their coding agents. The p
 ## Not connected yet?
 
 If no `taskhold_*` tools are available, add the server with no key. In Claude Code: `claude mcp add --transport http --scope user taskhold https://taskhold.com/api/mcp`, then the user runs `/mcp` and chooses Authenticate (other clients: https://taskhold.com/for). It connects with no sign-up, and your first tool call answers SETUP NEEDED with a one-time link where the user starts the trial or uses an account they already have: show that message as written. A user with an account who prefers a key can make a setup URL in Taskhold > Settings and paste it to you with "set this up"; fetch it, it is markdown with an API key and the exact config for your client. Do not invent a key.
+
+Once the trial is on, if the person already keeps tasks somewhere, offer once to bring them over. A TODO.md, todo.txt or task file in the repo: read it and file each open item with `taskhold_create` (or `taskhold_create_from_todo` for TODO comments in code). Todoist, Linear, GitHub Issues, Jira, Asana, Things, Reminders, a CSV and other apps: point them at https://taskhold.com/dashboard/import, which previews every task before saving and can undo the whole import.
 
 ## Projects
 
